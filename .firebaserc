@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "project--1234": {
+      "hosting": {
+        "demo-app1": [
+          "project--1234"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "project--1234"
+  }
+}

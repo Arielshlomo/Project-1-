@@ -1,0 +1,35 @@
+<app-header></app-header>
+<mat-card class="m-auto w-fit mt-50">
+  <mat-card-content>
+    <div style="width: 500px">
+      <p>Please select a category to start the game</p>
+      <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        [(ngModel)]="selectedCategoryId"
+      >
+        @for (category of categoriesData; track category) {
+        <mat-radio-button
+          class="example-radio-button"
+          [value]="category.numericIdentifier"
+        >
+          <div>
+            <b>{{ category.categoryName }}</b> (Number of words available :
+            {{ category.words.length }})
+          </div>
+        </mat-radio-button>
+        <br />
+        }
+      </mat-radio-group>
+      <button
+        mat-flat-button
+        color="primary"
+        class="mt-20"
+        [disabled]="selectedCategoryId == -1"
+        (click)="startGame()"
+      >
+        Start Game
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
