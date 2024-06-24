@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CategoryService } from '../../services/category.service';
-import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormArray, FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -8,11 +8,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { Languages } from '../../shared/enum/language.enum';
 import { Category } from '../../shared/interface/category.interface';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { GlobalService } from '../../services/global.service';
+import { ExitButtonComponent } from '../../exit-button/exit-button.component';
+import { HeaderComponent } from '../../shared/components/header/header.component';
+
 @Component({
   selector: 'app-playing-game',
   standalone: true,
@@ -28,6 +30,8 @@ import { GlobalService } from '../../services/global.service';
     RouterLink,
     MatToolbarModule,
     MatCardModule,
+    ExitButtonComponent,
+    HeaderComponent
   ],
   templateUrl: './playing-game.component.html',
   styleUrl: './playing-game.component.css'

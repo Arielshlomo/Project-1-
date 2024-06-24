@@ -3,6 +3,7 @@ import { TranslatedWord } from "./translated-word.interface";
 
 export interface Category {
     categoryName: string;
+    description?: string;
     categoryImage?: string;
     numericIdentifier: string;
     lastModificationDate: Date;

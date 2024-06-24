@@ -52,6 +52,7 @@ export class CategoryFormComponent implements OnInit {
   private initForm(availableData?: Category): void {
     this.categoryForm = this.formBuilder.group({
       categoryName: [availableData?.categoryName || '', Validators.required],
+      description: [availableData?.description || '', Validators.required],
       categoryImage: [availableData?.categoryImage || ''],
       numericIdentifier: [availableData?.numericIdentifier || ''],
       lastModificationDate: [availableData?.lastModificationDate || new Date()],

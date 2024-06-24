@@ -67,7 +67,6 @@ export class CategoryTableComponent implements OnInit {
         this.dataSource.filterPredicate = function (data, filter: string): boolean {
           return data.categoryName.toLowerCase().includes(filter) || data.words.length.toString() == filter;
         };
-
       }
     );
   }
